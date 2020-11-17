@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     handeScroll () {
-      console.log(this.$refs.myfilmheader._data.isShow)
+      // console.log(this.$refs.myfilmheader._data.isShow)
       // console.log(document.documentElement.scrollTop, this.$refs.myswiper.$el.offsetHeight)
       if (document.documentElement.scrollTop > this.$refs.myswiper.$el.offsetHeight) {
         // console.log('fixed')
