@@ -49,7 +49,7 @@ export default {
     height: 50px;
   }
   .cinema{
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     position: relative;
   }

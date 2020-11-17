@@ -32,13 +32,13 @@ export default {
         'X-Host': 'mall.film-ticket.film.list'
       }
     }).then(res => {
-      console.log(res.data.data)
+      // console.log(res.data.data)
       this.datalist = res.data.data.films
     })
   },
   methods: {
     handelChangePage (id) {
-      console.log(id)
+      // console.log(id)
       // 编程式导航-路径跳转
       this.$router.push(`/detail/${id}`)
       // 编程式导航 -名字跳转
