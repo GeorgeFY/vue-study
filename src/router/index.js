@@ -8,7 +8,7 @@ import detail from '../views/Detail'
 import login from '../views/Login'
 import Nowplaying from '../views/film/Nowplaying'
 import Comingsoon from '../views/film/Comingsoon'
-
+import city from '../views/city/City'
 Vue.use(Router)
 /* const auth = {
   isLogin () {
@@ -40,6 +40,10 @@ const router = new Router({
     {
       path: '/cinema',
       component: cinema
+    },
+    {
+      path: '/city',
+      component: city
     },
     {
       path: '/center',

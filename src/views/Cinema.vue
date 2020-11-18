@@ -1,7 +1,7 @@
 <template>
   <div class="cinema" :style="mystyle">
-    <ul>
-      <li v-for="data in datalist" :key="data.cinemaId">
+    <ul >
+      <li v-for="data in datalist" :key="data.cinemaId" @click="handelClickCinema()">
         {{data.name}}
       </li>
     </ul>
@@ -22,8 +22,9 @@ export default {
   },
   mounted () {
     this.mystyle.height = document.documentElement.clientHeight - 50 + 'px'
+    var id = localStorage.getItem('cityId')
     axios({
-      url: 'https://m.maizuo.com/gateway?cityId=420100&ticketFlag=1&k=5987517',
+      url: `https://m.maizuo.com/gateway?cityId=${id}&ticketFlag=1&k=5987517`,
       headers: {
         'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.0.4","e":"1605514300459406881849345","bc":"110100"}',
         'X-Host': 'mall.film-ticket.cinema.list'
@@ -36,10 +37,17 @@ export default {
           scrollbar: {
             fade: true,
             interactive: false
-          }
+          },
+          click: true
         })
       })
     })
+  },
+  methods: {
+    handelClickCinema () {
+      console.log('yuan')
+      this.$router.push('/film')
+    }
   }
 }
 </script>
